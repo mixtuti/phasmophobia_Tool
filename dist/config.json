@@ -1,0 +1,7 @@
+{
+  "font_size": 10,
+  "columns": 5,
+  "max_ghosts": 10,
+  "refresh_interval": 0,
+  "show_remaining": true
+}
