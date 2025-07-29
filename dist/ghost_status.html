@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="2"> <!-- 2秒ごとにリロード -->
+  <title>Phasmophobia ゴースト情報</title>
+  <style>
+    body {
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+      font-family: "Segoe UI", sans-serif;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .section {
+      margin-bottom: 1em;
+      padding: 4px 8px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 0.3em;
+      border-left: 4px solid #00ccff;
+      padding-left: 6px;
+    }
+
+    .list {
+      margin-left: 1em;
+      padding-left: 0;
+    }
+
+    .ghost-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: flex-start;
+      max-width: 100%;
+      padding: 8px;
+    }
+
+    .ghost-grid li {
+      list-style: none;
+      padding: 4px 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      min-width: 100px;
+      text-align: center;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="section" id="section-selected">
+    <div class="title">✅ 選択中</div>
+    <ul id="selected" class="list"></ul>
+  </div>
+
+  <div class="section" id="section-exclusion">
+    <div class="title">❌ 除外中</div>
+    <ul id="excluded" class="list"></ul>
+  </div>
+
+  <div class="section" id="candidate">
+    <div class="title">👻 候補ゴースト</div>
+    <ul id="candidates" class="ghost-grid"></ul>
+  </div>
+
+  <script src="ghost_status.js"></script>
+  <script src="viewer.js"></script>
+</body>
+</html>
